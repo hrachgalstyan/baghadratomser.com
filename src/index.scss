@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina+2:400,700&display=swap');
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+:root{
+    --primaryColor: #5fb7ea;
+    --primaryRGBA: rgba(0, 0, 0, 0.5);
+    --mainWhite: #fff;
+    --mainTransition: all 0.2s ease-in-out;
+    --mainSpacing: 0.1rem;
+    --mainFontSize: 18px;
+    --mobileFontSize: 14px;
+    --mainTitleFontSize: 30px;
+    --titleFont: 'Baloo Bhaina 2', cursive !important;
+    --textFont: 'Arial' !important;
+}
+
+.title {
+    font-size: var(--mainTitleFontSize);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    font-weight: normal;
+}
+
+body{
+    color: var(--primaryRGBA);
+    transition: var(--mainTransition);
+    margin: 0 auto;
+    font-size: var(--mainFontSize);
+    overflow-x: hidden;
+    outline: none;
+}
+
+.navbar-nav{
+    padding-left: 15px;
+}
+
+.nav-link::after{
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: #ccc;
+    height: 1px;
+    transform: scale(0);
+    transition: all 0.3s;
+}
+.nav-link:hover::after{
+    transform: scale(1);
+}
+
+.nav-link:focus::after{
+    content: '';
+    width: 0%;
+}
+
+.navbar-toggler:focus{
+    outline: none;
+}

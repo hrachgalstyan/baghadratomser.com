@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from 'react-router-dom'
-import shopBanner from '../../assets/Shop-banner.jpg'
 import $ from 'jquery'
 
 export default function Home() {
@@ -13,15 +12,6 @@ export default function Home() {
                     <li data-target="#carouselExampleControls" data-slide-to="2"></li>
                 </ol>
                 <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={shopBanner} className="d-block w-100" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={shopBanner} className="d-block w-100" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={shopBanner} className="d-block w-100" alt="..." />
-                    </div>
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>

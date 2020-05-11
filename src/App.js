@@ -13,6 +13,7 @@ import FAQ from './pages/FAQ'
 import Recipes from './pages/Recipes'
 import Shop from './pages/Shop'
 import SingleRecipe from './pages/SingleRecipe'
+import Admin from './pages/Admin'
 
 // ********** components ********** //
 import Header from './components/Header'
@@ -55,6 +56,9 @@ export default function App() {
                 </Route>
                 <Route path='/shop'>
                     <Shop />
+                </Route>
+                <Route path='/admin'>
+                    <Admin />
                 </Route>
                 
                 <Route path='/recipes/:id' children={<SingleRecipe></SingleRecipe>}>

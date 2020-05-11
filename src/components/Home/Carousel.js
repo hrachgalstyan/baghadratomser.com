@@ -1,37 +1,69 @@
-import React from "react";
+import React, {useState} from "react";
+import ReactDOM from 'react-dom';
 import {Link} from 'react-router-dom'
-import cake1 from '../../assets/cake-1.jpg'
-import $ from 'jquery'
+import banner1 from '../../assets/banner-1.jpg'
+import banner2 from '../../assets/banner-2.jpg'
+import banner3 from '../../assets/banner-3.jpg'
+import banner4 from '../../assets/banner-4.jpg'
+import Carousel from 'react-bootstrap/Carousel'
 
 export default function Home() {
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex, e) => {
+        setIndex(selectedIndex);
+    };
     return (
         <div className="container slider">
-            <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-target="#carouselExampleControls" data-slide-to="0" className="active"></li>
-                    <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-                </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={cake1} className="d-block w-100" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={cake1} className="d-block w-100" alt="..." />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={cake1} className="d-block w-100" alt="..." />
-                    </div>
-                </div>
-                <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
-            </div>
+            <Carousel activeIndex={index} onSelect={handleSelect} interval={1500}>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src={banner1}
+                    alt="First slide"
+                    />
+                    <Carousel.Caption className="carousel-caption d-none d-md-block">
+                        <h3>Մրգային տորթեր</h3>
+                        <p>Աղանդեր՝ կազմված կրեմով կամ ջեմով ներծծված մեկ կամ մի քանի շերտերից:</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src={banner2}
+                    alt="Second slide"
+                    />
+            
+                    <Carousel.Caption className="carousel-caption d-none d-md-block">
+                        <h3>Նրբաբլիթներ</h3>
+                        <p>Ռուսական խոհանոցին բնորոշ ուտեստներ են՝ պատրաստված շիկացած թավայի մեջ ջրիկ խմորի լցման միջոցով եփման եղանակով։</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src={banner3}
+                    alt="Third slide"
+                    />
+            
+                    <Carousel.Caption className="carousel-caption d-none d-md-block">
+                        <h3>Աղանդեր</h3>
+                        <p>Սեղանի վերջնական ուտեստ՝ նախատեսված լավ համային զգացումների համար, ընթրիքի վերջում մատուցվող:</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src={banner4}
+                    alt="Forth slide"
+                    />
+            
+                    <Carousel.Caption className="carousel-caption d-none d-md-block">
+                        <h3>Մաֆիններ</h3>
+                        <p>Մաֆին, փոքր, կլոր կամ օվալաձև թխվածք, հիմնականում՝ քաղցր։ Բաղադրության մեջ մտնում են տարբեր միջուկներ, այդ թվում նաև մրգեր։ Նման է կեքսի։</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
         </div>
-    )
+        );
 }

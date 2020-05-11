@@ -4,13 +4,16 @@ import './index.scss';
 import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom'
 import ScrollTop from './components/ScrollTop';
+import { ProductProvider } from './context/shop';
 
 ReactDOM.render(
-  <Router>
-    <ScrollTop>
-      <App />
-    </ScrollTop>
-  </Router>,
+  <ProductProvider>
+    <Router>
+      <ScrollTop>
+        <App />
+      </ScrollTop>
+    </Router>
+  </ProductProvider>,
   document.getElementById('root')
 );
 

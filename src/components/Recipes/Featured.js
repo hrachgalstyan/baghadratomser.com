@@ -3,6 +3,10 @@ import {Link} from 'react-router-dom'
 import cake1 from '../../assets/cake-1.jpg'
 import Loading from '../Loading'
 import {db} from '../../context/firebase'
+import banner1 from '../../assets/banner-1.jpg'
+import banner2 from '../../assets/banner-2.jpg'
+import banner3 from '../../assets/banner-3.jpg'
+import banner4 from '../../assets/banner-4.jpg'
 // import paginate from '../../utils/helpers'
 // import {items} from '../../context/data'
 
@@ -13,17 +17,25 @@ export default class Featured extends Component {
     }
 
     componentDidMount(){
-        // this.setState({
-        //     loading: false
-        // })
-        // console.log(items);
-        // console.log(this.state.product);
-        // let sort = paginate(items);
-        // console.log(sort);
-        // this.setState({
-        //     sorted: sort[this.state.page]
-        // })
+        setTimeout(()=>{
+            this.setState({
+                loading: false
+            })
+        }, 1000);
     }
+
+    // componentDidMount(){
+    //     this.setState({
+    //         loading: false
+    //     })
+    //     console.log(items);
+    //     console.log(this.state.product);
+    //     let sort = paginate(items);
+    //     console.log(sort);
+    //     this.setState({
+    //         sorted: sort[this.state.page]
+    //     })
+    // }
 
     // componentDidMount(){
     //     db.collection('Բաղադրատոմսեր')
@@ -52,7 +64,7 @@ export default class Featured extends Component {
                     <div className="row">
                         <div className="col">
                             <div className="single-post w-75 mx-auto text-center">
-                                <h3 className="post-category font-weight-light p-3 text-center">Ցուցադրված։ 18</h3>
+                                <h3 className="post-category font-weight-light p-3 text-center">Ցուցադրված։ 9</h3>
                             </div>
                         </div>
                     </div>
@@ -60,158 +72,75 @@ export default class Featured extends Component {
                 <div className="grid-posts">
                     <div className="container">
                         <div className="row">
-                            {/* <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                    {this.state.sorted.map(item => {
-                                        return (<div className="card border-0" key={item.id}>
-                                            <img className="card-img-top" src={item.image} alt="Card image cap" />
-                                            <div className="card-body">
-                                                <h5 className="post-category font-weight-light text-center">{item.name}</h5>
-                                            </div>
-                                        </div>
-                                        )
-                                    })}
-                            </div> */}
                             <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
+                                <div className="card">
+                                    <img className="card-img-top" src={banner4} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
+                                        <h5 className="post-category font-weight-light text-center">Մաֆին</h5>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
+                                <div className="card">
+                                    <img className="card-img-top" src={banner1} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
+                                        <h5 className="post-category font-weight-light text-center">Մրգային տորթ</h5>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
+                                <div className="card">
+                                    <img className="card-img-top" src={banner2} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
+                                        <h5 className="post-category font-weight-light text-center">Նրբաբլիթներ</h5>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
+                                <div className="card">
+                                    <img className="card-img-top" src={banner3} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
+                                        <h5 className="post-category font-weight-light text-center">Աղանդեր</h5>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
+                                <div className="card">
+                                    <img className="card-img-top" src={banner4} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
+                                        <h5 className="post-category font-weight-light text-center">Մաֆին</h5>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
+                                <div className="card">
+                                    <img className="card-img-top" src={banner3} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
+                                        <h5 className="post-category font-weight-light text-center">Աղանդեր</h5>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
+                                <div className="card">
+                                    <img className="card-img-top" src={banner1} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
+                                        <h5 className="post-category font-weight-light text-center">Մրգային տորթ</h5>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
+                                <div className="card">
+                                    <img className="card-img-top" src={banner2} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
+                                        <h5 className="post-category font-weight-light text-center">Նրբաբլիթներ</h5>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
+                                <div className="card">
+                                    <img className="card-img-top" src={banner1} alt="Card image cap" />
                                     <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-9 col-sm-8 col-md-4 col-lg-4 p-2 mx-auto">
-                                <div className="card border-0">
-                                    <img className="card-img-top" src={cake1} alt="Card image cap" />
-                                    <div className="card-body">
-                                        <h5 className="post-category font-weight-light text-center">Ելակով տորթ</h5>
+                                        <h5 className="post-category font-weight-light text-center">Աղանդեր</h5>
                                     </div>
                                 </div>
                             </div>

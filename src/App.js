@@ -61,7 +61,8 @@ export default function App() {
                     <Admin />
                 </Route>
                 
-                <Route path='/recipes/:id' children={<SingleRecipe></SingleRecipe>}>
+                <Route path='/recipes:id' children={<SingleRecipe>dsadas</SingleRecipe>} component={SingleRecipe} >
+                    <SingleRecipe />
                     
                 </Route>
                 <Route path='*'>

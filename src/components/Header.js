@@ -22,16 +22,16 @@ export default function Header() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto text-left">
                             <li className="nav-item pl-2">
-                                <Link to='/recipes' className="nav-link" onClick={handleHide} >բաղադրատոմսեր</Link>
+                                <Link to='/recipes' className="nav-link" onClick={handleHide} >ԲԱՂԱԴՐԱՏՈՄՍԵՐ</Link>
                             </li>
                             <li className="nav-item pl-2">
-                                <Link to='/advices' className="nav-link" onClick={handleHide}>խորհուրդներ</Link>
+                                <Link to='/advices' className="nav-link" onClick={handleHide}>ԽՈՐՀՈՒՐԴՆԵՐ</Link>
                             </li>
                             <li className="nav-item pl-2">
-                                <Link to='/shop' className="nav-link" onClick={handleHide}>խանութ</Link>
+                                <Link to='/shop' className="nav-link" onClick={handleHide}>ԽԱՆՈՒԹ</Link>
                             </li>
                             <li className="nav-item pl-2">
-                                <Link to='/about' className="nav-link" onClick={handleHide}>մեր մասին</Link>
+                                <Link to='/about' className="nav-link" onClick={handleHide}>ՄԵՐ ՄԱՍԻՆ</Link>
                             </li>
                         </ul>
                     </div>

@@ -5,15 +5,18 @@ import App from './App';
 import {BrowserRouter as Router} from 'react-router-dom'
 import ScrollTop from './components/ScrollTop';
 import { ProductProvider } from './context/shop';
+import { RecipesProvider } from './context/recipes';
 
 ReactDOM.render(
-  <ProductProvider>
-    <Router>
-      <ScrollTop>
-        <App />
-      </ScrollTop>
-    </Router>
-  </ProductProvider>,
+  <RecipesProvider>
+    <ProductProvider>
+      <Router>
+        <ScrollTop>
+          <App />
+        </ScrollTop>
+      </Router>
+    </ProductProvider>
+  </RecipesProvider>,
   document.getElementById('root')
 );
 

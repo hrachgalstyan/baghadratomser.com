@@ -20,9 +20,13 @@ export default function Shop() {
 
                 // time
                 let prices = new Set();
+                let min = Math.min(...products.map(item => item.price));
+                let max = Math.max(...products.map(item => item.price));
+                let minValue = Math.round(min/1000)*1000;
+                let maxValue = Math.round(max/1000)*1000 + 1000;
                 prices.add("Գին");
-                for(let product in products){
-                    prices.add(products[product]["price"]);
+                for(var i = minValue; i <= maxValue; i+=1000){
+                    prices.add(`${i} դրամ`);
                 }
                 prices = [...prices];
 
@@ -32,7 +36,6 @@ export default function Shop() {
                 if(loading){
                     return (
                         <>
-                            <h3 className="post-category font-weight-light p-3 text-center">Խանութ</h3>
                             <Loading />
                         </>
                     )

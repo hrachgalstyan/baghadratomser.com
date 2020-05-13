@@ -26,7 +26,7 @@ export default class Contact extends Component {
         var subject = document.getElementById('subject').value;
         var message = document.getElementById('message').value;
 
-        db.collection("usersApplication").add({
+        db.collection("Կապ").add({
             firstName: firstName,
             lastName: lastName,
             phone: phone,

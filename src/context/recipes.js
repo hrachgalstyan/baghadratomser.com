@@ -7,16 +7,18 @@ const RecipesContext = React.createContext();
 class RecipesProvider extends Component{
     state={
         products: [],
-        type: "Տեսակ",
         loading: true,
         featured: [],
-        price: "Գին",
-        search: ""
+        search: "",
+        type: "Տեսակ",
+        time: "Պատրաստման ժամանակը",
+        author: "Տեղադրող",
+        ingredients: "Բաղադրիչներ"
     }
     
     
     componentDidMount(){
-        db.collection('Բաղադրատոմսեր')
+        db.collection('Ցուցադրված')
         .get()
         .then( snapshot => {
             const product = [];
@@ -40,6 +42,7 @@ class RecipesProvider extends Component{
     
     // handle filtering
     handleChange = event => {
+        this.state.loading = true;
         const name = event.target.name;
         const value = event.target.value;
         this.setState({
@@ -50,7 +53,7 @@ class RecipesProvider extends Component{
 
     // sort data
     sortData = () => {
-        const { products, featured, price, type, search } = this.state;
+        const { products, time, type, search, author, ingredients } = this.state;
 
         let  tempProducts = [...products];
 
@@ -58,10 +61,16 @@ class RecipesProvider extends Component{
         if(type !== "Տեսակ") {
             tempProducts = tempProducts.filter(item => item.type === type);
         }
-        if(price !== "Գին") {
-            tempProducts = tempProducts.filter(item => item.price <= parseInt(price));
+        if(time !== "Պատրաստման ժամանակը") {
+            tempProducts = tempProducts.filter(item => item.time <= parseInt(time));
         }
-
+        if(author !== "Տեղադրող") {
+            tempProducts = tempProducts.filter(item => item.author === author);
+        }
+        if(ingredients !== "Բաղադրիչներ") {
+            tempProducts = tempProducts.filter(item => item.ingredients.length - 1 <= parseInt(ingredients));
+        }
+        
         if(search.length > 0){
             tempProducts = tempProducts.filter(item => {
                 let tempSearch = search.toLowerCase();
@@ -71,11 +80,10 @@ class RecipesProvider extends Component{
                 }
             })
         }
-
-        this.setState({ 
-            featured: tempProducts
-        });
+        this.setState({ featured: tempProducts});
+        this.state.loading = false;
     }
+
 
     render(){
         return(

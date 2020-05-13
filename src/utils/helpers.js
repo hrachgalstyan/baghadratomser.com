@@ -1,5 +1,5 @@
-export default function paginate(products) {
-    const itemsPerPage = 4;
+export function paginate(products) {
+    const itemsPerPage = 3;
     const numberOfPages = Math.ceil(products.length / itemsPerPage);
     // const newProducts = Array.from({ length: numberOfPages}, () => {
     //     return this.state.product.splice(0, itemsPerPage);

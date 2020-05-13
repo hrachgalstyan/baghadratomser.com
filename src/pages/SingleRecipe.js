@@ -13,7 +13,7 @@ export default function SingleRecipe() {
         setLoading(true);
         async function getRecipe(){
             try {
-                const response = await fetch(`https://firestore.googleapis.com/v1/projects/baghadratomser/databases/(default)/documents/Բաղադրատոմսեր/${newId}`);
+                const response = await fetch(`https://firestore.googleapis.com/v1/projects/baghadratomser/databases/(default)/documents/Ցուցադրված/${newId}`);
                 const data = await response.json();
                 const {image, title} = data.fields;
                 if(data.fields){
